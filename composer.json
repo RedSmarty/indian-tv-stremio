@@ -1,5 +1,5 @@
 {
-    "name": redsmarty/"indiantvstremio",
+    "name": "redsmarty/indiantvstremio",
     "description": "Indian Live Tv channels from various sources. Some of them works only on Indian IP.",
     "type": "project",
     "require": {
