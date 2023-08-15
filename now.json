@@ -2,7 +2,7 @@
     "version": 2,
     "name": "stremio-indian-livetv",
     "builds": [
-        { "src": "*.php", "use": "now-php" }
+        { "src": "*.php", "use": "vercel-php@0.6.0" }
     ],
 	"rewrites": [
     { "source": "/manifest.json", "destination": "/manifest.php" },
