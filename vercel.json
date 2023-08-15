@@ -1,0 +1,42 @@
+{
+  "version": 2,
+  "name": "stremio-indian-livetv",
+  "routes": [
+    {
+      "src": "/manifest.json",
+      "dest": "/manifest.php"
+    },
+    {
+      "src": "/meta/(.*)/(.*)/(.*).json",
+      "dest": "/metas.php?type=$1&id=$2&extra=$3"
+    },
+    {
+      "src": "/meta/(.*)/(.*).json",
+      "dest": "/metas.php?type=$1&id=$2"
+    },
+    {
+      "src": "/stream/(.*)/(.*)/(.*).json",
+      "dest": "/streams.php?type=$1&id=$2&extra=$3"
+    },
+    {
+      "src": "/stream/(.*)/(.*).json",
+      "dest": "/streams.php?type=$1&id=$2"
+    },
+    {
+      "src": "/catalog/(.*)/(.*)/(.*).json",
+      "dest": "/catalogs.php?type=$1&id=$2&extra=$3"
+    },
+    {
+      "src": "/catalog/(.*)/(.*).json",
+      "dest": "/catalogs.php?type=$1&id=$2"
+    }
+  ],
+  "regions": [
+    "bom1"
+  ],
+  "functions": {
+    "*.php": {
+      "runtime": "vercel-php@0.4.0"
+    }
+  }
+}
